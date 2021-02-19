@@ -42,9 +42,8 @@ Now check to make sure the WSL is defaulted to version 2
 Open up powershell as admin (just in case we need to change the version)  
   
 `wsl --list --verbose`
-  
-  NAME      STATE           VERSION  
-* Debian    Stopped         2  
+> NAME      STATE           VERSION
+>* Debian    Stopped         2
   
 If you are not on version 2, you can force it with the following command   
   
