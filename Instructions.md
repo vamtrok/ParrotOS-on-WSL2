@@ -87,7 +87,15 @@ Once that is done then the full security tools (large download over 16GB)
 `sudo apt -y --allow-downgrades install parrot-interface parrot-interface-full parrot-tools-full`  
 You will go through some questions on configurtion for different packages, answer as you need.  
   
-Now that is done, I'm sure you want to install a visual client, so xRDP  
+Now that is done, I'm sure you want to install a visual client, so xRDP   
+I'm partial to the KDE environment, but as things go in Linux, "Just do you!"  
+Install KDE  
+
+
+
+
+
+
 
 
 
