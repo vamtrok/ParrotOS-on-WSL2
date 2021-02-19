@@ -1,7 +1,7 @@
 # ParrotOS-on-WSL2
 # Directions
 
-First, thank you to the following sites on guiding me through the ins and outs of this install
+First, thank you to the following sites on guiding me through the ins and outs of this install 
 Installing WSL2 (https://www.windowscentral.com/how-install-wsl2-windows-10)
 MS documentation supprint the above(https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 ParrotSec OS guide to install on WSL2(https://community.parrotsec.org/t/parrot-on-wsl2/14898)
