@@ -73,9 +73,8 @@ This adds an entry we can edit to get the parrot deb
   
 Change the deb mirror to a more current one   
 edit the /etc/apt/sources.list.d/parrot.list    
-remove the current deb and replace with the following  
->#deb https://mirror.parrotsec.org/parrot rolling main contrib non-free  
->deb https://mirror.wdc1.us.leaseweb.net/parrot rolling main contrib non-free  
+remove the current deb and replace with the following (exercise caution as you are now trusting an unsigned source)  
+`deb [trusted=yes] http://mirrors.mit.edu/parrot/ rolling main contrib non-free`
   
 ?Parrot install again?  
   
