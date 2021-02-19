@@ -84,7 +84,7 @@ After that I went to the next step which was to install the parrot tools
 `sudo apt-get install parrot-interface parrot-interface-full parrot-tools-full`
   
 Once that is done then the full security tools (large download over 16GB)  
-`sudo apt -y --allow-downgrades install parrot-interface parrot-interface-full parrot-tools-full`
+`sudo apt -y --allow-downgrades install parrot-interface parrot-interface-full parrot-tools-full`  
 You will go through some questions on configurtion for different packages, answer as you need.  
   
 Now that is done, I'm sure you want to install a visual client, so xRDP  
