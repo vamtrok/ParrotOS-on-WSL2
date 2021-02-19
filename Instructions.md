@@ -42,8 +42,9 @@ Now check to make sure the WSL is defaulted to version 2
 Open up powershell as admin (just in case we need to change the version)  
   
 `wsl --list --verbose`
-> NAME      STATE           VERSION
->* Debian    Stopped         2
+|   NAME   |   STATE   |   VERSION   |
+|----------|:---------:|------------:|
+|* Debian  |  Stopped  |       2     |
   
 If you are not on version 2, you can force it with the following command   
   
@@ -76,9 +77,7 @@ edit the /etc/apt/sources.list.d/parrot.list
 remove the current deb and replace with the following (exercise caution as you are now trusting an unsigned source)  
 `deb [trusted=yes] http://mirrors.mit.edu/parrot/ rolling main contrib non-free`
   
-?Parrot install again?  
-  
-Perform another update and upgrade, this should take some time as it installs all of the rolling packages  
+Perform another update and upgrade, this should take some time as it starts to install the parrot base and rolling packages  
 `sudo apt update && sudo apt upgrade'
   
 After that I went to the next step which was to install the parrot tools  
