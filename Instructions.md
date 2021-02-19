@@ -70,8 +70,11 @@ Now back to the (https://community.parrotsec.org/t/parrot-on-wsl2/14898) the sec
 >sudo ./parrot-install.sh
 
 I chose 1 to let it install the core (there were a few packages missed but you can ignore them for now)
+This adds an entry we can edit to get the parrot deb
 
 Change the deb mirror to a more current one 
+edit the /etc/apt/sources.list.d/*
+remove the current deb and replace with the following
 'deb https://mirror.wdc1.us.leaseweb.net/parrot rolling main contrib non-free`
 
 ?Parrot install again?
