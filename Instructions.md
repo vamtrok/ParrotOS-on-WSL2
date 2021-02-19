@@ -41,7 +41,7 @@ If you recieve the following error: **"Error 0x80370102"** this is either 2 thin
 Now check to make sure the WSL is defaulted to version 2  
 Open up powershell as admin (just in case we need to change the version)  
   
-`wsl --list --verbose`  
+`wsl --list --verbose`
   
   NAME      STATE           VERSION  
 * Debian    Stopped         2  
@@ -52,11 +52,11 @@ wsl --set-version <distribution name> <versionNumber>  (In my example this would
   
 Now that you are on version 2 open the distro app and perform an update and upgrade  
   
-'sudo apt update && sudo apt upgrade'  
+'sudo apt update && sudo apt upgrade'
   
 When that is finished, grab these packages (thanks to https://exploits.run/parrot-wsl/ if you don't have the gnupg, the script fails)  
   
-'sudo apt install wget curl gnupg -y'  
+'sudo apt install wget curl gnupg -y'
   
 I would advise you add a new DNS or change to a public DNS (Subsystem in Windows, tries to DNS query through the host machine which causes some of the parrot-install script)  
 If you have never changed your DNS then you just need to edit /etc/resolv.conf and add something like  
@@ -73,20 +73,21 @@ I chose 1 to let it install the core (there were a few packages missed but you c
 This adds an entry we can edit to get the parrot deb  
   
 Change the deb mirror to a more current one   
-edit the /etc/apt/sources.list.d/*  
+edit the /etc/apt/sources.list.d/parrot.list    
 remove the current deb and replace with the following  
-'deb https://mirror.wdc1.us.leaseweb.net/parrot rolling main contrib non-free`  
+>#deb https://mirror.parrotsec.org/parrot rolling main contrib non-free
+>deb https://mirror.wdc1.us.leaseweb.net/parrot rolling main contrib non-free
   
 ?Parrot install again?  
   
 Perform another update and upgrade, this should take some time as it installs all of the rolling packages  
-`sudo apt update && sudo apt upgrade'  
+`sudo apt update && sudo apt upgrade'
   
 After that I went to the next step which was to install the parrot tools  
-`sudo apt-get install parrot-interface parrot-interface-full parrot-tools-full`  
+`sudo apt-get install parrot-interface parrot-interface-full parrot-tools-full`
   
 Once that is done then the full security tools (large download over 16GB)  
-`sudo apt -y --allow-downgrades install parrot-interface parrot-interface-full parrot-tools-full`  
+`sudo apt -y --allow-downgrades install parrot-interface parrot-interface-full parrot-tools-full`
 You will go through some questions on configurtion for different packages, answer as you need.  
   
 Now that is done, I'm sure you want to install a visual client, so xRDP  
