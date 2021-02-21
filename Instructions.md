@@ -81,26 +81,36 @@ Perform another update and upgrade, this should take some time as it starts to i
 `sudo apt update && sudo apt upgrade'
   
 After that I went to the next step which was to install the parrot tools  
-`sudo apt-get install parrot-interface parrot-interface-full parrot-tools-full`
+`sudo apt-get install parrot-interface parrot-interface-full parrot-tools-full`  
+
+When I ran the previous command I received the following error  
+"The following packages have unmet dependencies:
+ libc6-dev : Breaks: libgcc-8-dev (< 8.4.0-2~) but 8.3.0-6 is to be installed
+E: Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages."    
+So I removed the bad package   
+`sudo apt remove libgcc-8-dev`     
+and re ran the installer    
+`sudo apt-get install parrot-interface parrot-interface-full parrot-tools-full`  
+
+Once that is finished a final update check  
+`sudo apt update && sudo apt upgrade'  
+
+now close the debian instance and open it back up and you should see the theme for parrot and have the parrot-upgrade command  
   
-Once that is done then the full security tools (large download over 16GB)  
-`sudo apt -y --allow-downgrades install parrot-interface parrot-interface-full parrot-tools-full`  
-You will go through some questions on configurtion for different packages, answer as you need.  
+Now that is done, I'm sure you want to install a visual client, so xRDP  
+`sudo apt install xrdp`  
+Now for Quality of Life (changing ports, bpp) to make xRDP look better  
   
-Now that is done, I'm sure you want to install a visual client, so xRDP   
-I'm partial to the KDE environment, but as things go in Linux, "Just do you!"  
-Install KDE  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`sudo cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.bak`
+`sudo sed -i 's/3389/3390/g' /etc/xrdp/xrdp.ini`
+`sudo sed -i 's/max_bpp=32/#max_bpp=32\nmax_bpp=128/g' /etc/xrdp/xrdp.ini`
+`sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini`
+  
+Now start the xrdp  
+`sudo /etc/init.d/xrdp start`
+Check status of xrdp  
+`sudo /etc/init.d/xrdp status`  
+  
+  
+ # Enjoy you're newly installed and updated Parrot Sec running on WSL 2 on Windows!
+  
