@@ -52,13 +52,13 @@ wsl --set-version <distribution name> <versionNumber>  (In my example this would
   
 Now that you are on version 2 open the distro app and perform an update and upgrade  
   
-'sudo apt update && sudo apt upgrade'
+`sudo apt update && sudo apt upgrade`
   
 When that is finished, grab these packages (thanks to https://exploits.run/parrot-wsl/ if you don't have the gnupg, the script fails)  
   
 'sudo apt install wget curl gnupg -y'
   
-I would advise you add a new DNS or change to a public DNS (Subsystem in Windows, tries to DNS query through the host machine which causes some of the parrot-install script)  
+I would advise you add a new DNS or change to a public DNS (Subsystem in Windows, tries to DNS query through the host machine which causes some issues with parrot-install script)  
 If you have never changed your DNS then you just need to edit /etc/resolv.conf and add something like  
 >nameserver 8.8.8.8  
 >nameserver 1.1.1.1  
