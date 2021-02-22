@@ -101,16 +101,15 @@ Now that is done, I'm sure you want to install a visual client, so xRDP
 `sudo apt install xrdp`  
 Now for Quality of Life (changing ports, bpp) to make xRDP look better  
   
-`sudo cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.bak`
-`sudo sed -i 's/3389/3390/g' /etc/xrdp/xrdp.ini`
-`sudo sed -i 's/max_bpp=32/#max_bpp=32\nmax_bpp=128/g' /etc/xrdp/xrdp.ini`
-`sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini`
+`sudo cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.bak`  
+`sudo sed -i 's/3389/3390/g' /etc/xrdp/xrdp.ini`  
+`sudo sed -i 's/max_bpp=32/#max_bpp=32\nmax_bpp=128/g' /etc/xrdp/xrdp.ini`  
+`sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini`  
   
 Now start the xrdp  
-`sudo /etc/init.d/xrdp start`
+`sudo /etc/init.d/xrdp start`  
 Check status of xrdp  
 `sudo /etc/init.d/xrdp status`  
-  
   
  # Enjoy you're newly installed and updated Parrot Sec running on WSL 2 on Windows!
   
